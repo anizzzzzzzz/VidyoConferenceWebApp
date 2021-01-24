@@ -1,0 +1,207 @@
+body{
+    margin: 0 !important;
+}
+
+div.conference-div{
+    height: 91vh;
+    /* padding: 0 20px; */
+    margin-right: 0;
+    display: flex;
+}
+
+div.video-section{
+    /* margin: auto; */
+    width: 100%;
+}
+
+/* --------------------------- Chat ------------------------------------ */
+div.chat-section{
+    display: none;
+    background-color: #b9b9b9;
+}
+div.chat-section .chat-div{
+    height: 100%;
+    position: relative;
+}
+.message {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.message::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.message img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.message img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+/* --------------------------- Participants ------------------------------------ */
+div.chat-section .participants-div{
+    display: none;
+    height: 100%;
+}
+.participants-div h2{
+    text-align: center;
+}
+.participants-div #participantTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.participants-div #participantTable td, .participants-div #participantTable th {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: center;
+}
+
+.participants-div #participantTable tr:nth-child(even){background-color: #f2f2f2;}
+
+.participants-div #participantTable tr:hover {background-color: #ddd;}
+
+.participants-div #participantTable th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: center;
+background-color: black;
+color: white;
+}
+.participants-div #participantTable .table-statuses{
+    text-align: right;
+}
+.participants-div #participantTable .table-statuses span{
+    display: inline-block;
+    margin-left: 4px;
+}
+
+/* -------------------- Button Styles ------------------------------- */
+div.buttons-div{
+    background-color: black;
+    height: 9vh;
+    margin-right: 0px;
+    position: relative;
+}
+div.connection-status{
+    position: absolute;
+}
+div.connection-status p{
+    padding: 10px;
+    color: white;
+    font-weight: 800;
+}
+
+div.buttons-div div.sub-buttons{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+div.buttons-div div.sub-buttons button{
+    height: 100%;
+    width: 120px;
+    border-radius: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background: transparent;
+    /* background-color: transparent !important; */
+    border: 0px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+}
+
+div.buttons-div div.sub-buttons button:hover{
+    background-color:  #183655;
+    border:0;
+}
+
+.call-loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* Icons */
+.icon {
+    display: inline-block;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+.icon-mute-on{
+    background-image: url(../img/mute-on.svg);
+}
+.icon-mute-off{
+    background-image: url(../img/mute-off.svg);
+}
+.icon-call-on{
+    background-image: url(../img/call-on.svg);
+}
+.icon-call-off{
+    background-image: url(../img/call-off.svg);
+}
+.icon-camera-on{
+    background-image: url(../img/video-on.svg);
+}
+.icon-camera-off{
+    background-image: url(../img/video-off.svg);
+}
+.icon-screen-share{
+    background-image: url(../img/screen-share.svg);
+}
+.icon-screen-share-off{
+    background-image: url(../img/screen-share-off.svg);
+}
+.icon-participants{
+    background-image: url(../img/people.svg);
+}
+.icon-chat{
+    background-image: url(../img/chat-fill.svg);
+}
